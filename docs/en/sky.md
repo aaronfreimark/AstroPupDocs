@@ -84,15 +84,15 @@ hour after dusk, it goes to the front of the queue.
 
 The toolbar holds the chart's controls:
 
-- **Shading** :sf:clock: — switch between the three shading modes above.
-- **Filters** :sf:line.3.horizontal.decrease: — show or hide object types (galaxies, nebulae,
+- :sf:clock: **Shading** — switch between the three shading modes above.
+- :sf:line.3.horizontal.decrease: **Filters** — show or hide object types (galaxies, nebulae,
   clusters…), planets, and comets; limit to favorites; hide
   targets you've already imaged.
-- **Apparent size** :sf:circle.dotted.circle: — a slider that hides targets smaller than a
+- :sf:circle.dotted.circle: **Apparent size** — a slider that hides targets smaller than a
   chosen fraction of your field of view, with a live preview.
-- **More** :sf:ellipsis: — Settings, this documentation, credits, release
+- :sf:ellipsis: **More** — Settings, this documentation, credits, release
   notes, and a one-tap feedback email.
-- **Targets** :sf:magnifyingglass: — the full target list, below.
+- :sf:magnifyingglass: **Targets** — the full target list, below.
 
 ## Targets list
 
@@ -130,11 +130,11 @@ card:
 
 A few of those previews, worth seeking out:
 
-![Saturn with its rings drawn at the current tilt, ring shadow and Cassini division visible](images/planet-saturn.png)
+![Saturn with its rings drawn at the current tilt, ring shadow and Cassini division visible](images/planet-saturn.png "Saturn's rings, drawn at their real tilt for the planning date")
 
-![Jupiter with tonight's positions of Io, Europa, Ganymede, and Callisto, labeled](images/planet-jupiter.png)
+![Jupiter with tonight's positions of Io, Europa, Ganymede, and Callisto, labeled](images/planet-jupiter.png "Jupiter's Galilean moons, lined up as they'll appear tonight")
 
-![Top-down comet orbit map showing the Sun, Earth's orbit, the comet with its tail, distances, and the perihelion date](images/comet-orbit.png)
+![Top-down comet orbit map showing the Sun, Earth's orbit, the comet with its tail, distances, and the perihelion date](images/comet-orbit.png "A comet's orbit from above — Sun, Earth's orbit, distances, and days to perihelion")
 
 ## Settings
 

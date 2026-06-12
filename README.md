@@ -46,7 +46,11 @@ incorrectly in at least one consumer.
 2. **Images are block-level only** — `![alt text](images/file.png)`
    alone on its own line, never inline mid-sentence.  Alt text is
    required (it becomes the accessibility label in the apps and the
-   `alt` attribute on the web).
+   `alt` attribute on the web).  An optional **caption** uses the
+   standard markdown title syntax —
+   `![alt](images/file.png "Visible caption")` — rendered as small
+   secondary text beneath the image in the apps and as a
+   `figcaption` on the web.
 3. **Image paths are relative to the `docs/` root** — always
    `images/<name>.png`, regardless of which locale folder the page
    lives in.
