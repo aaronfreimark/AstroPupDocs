@@ -15,29 +15,28 @@ documentation naturally belongs in the site's navigation.
 
 ## Getting the content
 
-Add this repo as a **git submodule** of the site (any path; the
-content lives in its `docs/` directory).  The submodule pin is the
-site's docs version — bump it deliberately, the same way each iOS
-app bumps its pinned package version.
+**As built (June 2026):** the site fetches content **at runtime
+from GitHub raw** — markdown and images both load from
+`https://raw.githubusercontent.com/aaronfreimark/AstroPupDocs/main/docs/…`
+in the browser.  No submodule, no build-time copy, no redeploy
+for content updates.
 
-Build pipeline notes (the site deploys via AWS Amplify):
+Consequences to keep in mind:
 
-- `amplify.yml` preBuild needs `git submodule update --init` before
-  `npm ci`.
-- **If this repo is private**, the Amplify build container cannot
-  clone it without credentials.  Either make this repo public, or
-  store a GitHub token in an Amplify environment variable and add,
-  before the submodule update:
-
-  ```
-  git config --global url."https://${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"
-  ```
-
-- The `docs/` tree (markdown + images) must end up in the deployed
-  artifacts so images serve at a stable URL — copy it into the Vite
-  public assets (e.g. to `public/docs/`) during the build, or add a
-  small Vite plugin.  Everything below assumes images serve from
-  `/docs/images/…`.
+- **The site tracks `main` live.**  Anything merged to `main` is
+  public on astropup.app within minutes (GitHub raw's CDN caches
+  briefly).  The README rule "write pages to describe *shipped*
+  behavior" is therefore load-bearing: documentation for an
+  unreleased feature must not merge to `main` until the feature's
+  app release ships.  (The iOS apps are unaffected either way —
+  they pin tagged versions.)
+- **This repo must stay public.**  Flipping it private would
+  silently break the live docs pages.
+- The original plan (git submodule pinned per deploy, docs copied
+  into the Vite public assets) remains a valid alternative if
+  runtime fetching ever becomes a problem — it trades instant
+  updates for a version pin and no GitHub dependency at
+  page-view time.
 
 ## Rendering the contract
 
@@ -95,8 +94,8 @@ beyond the three custom behaviors:
 
 ## Updating
 
-Content changes land on this repo's `main` freely and are tagged
-semver-style for the iOS apps.  The site adopts by bumping the
-submodule pointer and redeploying.  No site code change is needed
-for content-only updates; new apps appear by routing to the new
-page file.
+Content changes land on this repo's `main` and appear on the
+site automatically (runtime fetch — see above); the iOS apps
+adopt them later by bumping their pinned tag.  No site code
+change is needed for content-only updates; new apps appear by
+routing to the new page file.
