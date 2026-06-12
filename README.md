@@ -2,9 +2,12 @@
 
 Single source of truth for AstroPup user documentation, consumed by:
 
-- **The AstroPup apps** (iOS) — as a Swift package dependency; each
-  app's page ships inside its bundle via `Bundle.module` and renders
-  in the in-app Guide.
+- **The AstroPup apps** (iOS) — as a Swift package dependency.  The
+  package carries the content (via `Bundle.module`), the canonical
+  contract parser (`DocumentationContent`), and the shared SwiftUI
+  renderer (`DocumentationPageView`); each app contributes only its
+  slug and its sheet chrome.  Regenerate SF Symbol PNGs with
+  `swift scripts/sfrender.swift <symbol> <out.png>`.
 - **astropup.app** (web) — as a git submodule; the site reads
   `docs/` directly and renders each app's page.
 
