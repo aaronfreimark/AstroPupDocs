@@ -35,6 +35,8 @@ outage shows the last known forecast rather than nothing.
 
 ## Sky chart
 
+![The main screen: weather strip above a full-disc sky chart with a horizon silhouette, hours-above-horizon shading, legend, and toolbar](images/sky-chart.png)
+
 The chart is your whole sky at once: the edge of the disc is your
 horizon, the center is straight up.  Deep-sky objects appear as
 catalog symbols, planets as colored discs, comets with a small
@@ -78,6 +80,8 @@ hour after dusk, it goes to the front of the queue.
 
 ## Toolbar
 
+![Toolbar with shading mode, filter, apparent size, more menu, and targets buttons](images/toolbar.png)
+
 The toolbar holds the chart's controls:
 
 - **Shading** — switch between the three shading modes above.
@@ -92,6 +96,8 @@ The toolbar holds the chart's controls:
 
 ## Targets list
 
+![Targets list with search and per-target visibility timeline bars](images/targets-list.png)
+
 Everything visible tonight, as a list.  Each row carries a
 **visibility timeline** — a bar showing exactly when that target is
 above your horizon during the night — plus its type, brightness,
@@ -101,6 +107,8 @@ hide.  Planets and comets get their own sections at the top.  Tap
 any row for the detail sheet.
 
 ## Object detail
+
+![Object detail for galaxy M101: altitude chart with visibility span, photo preview with field-of-view comparison, and rise, set, and transit facts](images/object-detail.png)
 
 Tap any target — on the chart or in the list — for its planning
 card:
@@ -123,6 +131,8 @@ card:
 ## Settings
 
 ### Sites
+
+![Site editor showing the clear-sky alert toggle, location map, and horizon import options](images/site-detail.png)
 
 Your observing sites, synced through iCloud Drive to every device
 on your account.  Tap a site to edit its name and location, and to
