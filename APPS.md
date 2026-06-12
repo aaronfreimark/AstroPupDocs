@@ -29,8 +29,16 @@ screenshot for each major section.
   a page describing an unreleased feature goes public the moment
   it merges.
 
-Commit, then tag the next semver version (`git tag 0.4.0 && git
-push origin main 0.4.0`) — apps pin tags, never `main`.
+**Draft on a branch, not on `main`.**  `main` is the publish
+button — the website serves it live — so revision cycles happen
+on a branch (e.g. `horizon-docs`), which neither consumer can
+see.  While drafting, point the app at the local checkout (a
+path dependency on `../AstroPupDocs`) so edits appear in the
+app instantly without commits.  When the docs are final and the
+app release ships: merge to `main` (website goes live), tag the
+next semver version (`git tag 0.5.0 && git push origin main
+0.5.0`), and switch the app to the remote pin — apps pin tags,
+never `main`.
 
 ## 2. Integrate the package
 

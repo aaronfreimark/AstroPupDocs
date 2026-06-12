@@ -89,9 +89,16 @@ incorrectly in at least one consumer.
 
 ## Releasing
 
-Tag releases semver-style (`0.1.0`, `0.2.0`, …).  Each app pins a tag
-in its package dependencies — content edits land on `main` freely,
-and an app adopts them by bumping its pinned version on its own
-release schedule.  Write pages to describe **shipped** behavior;
-documentation for a new feature lands in the same docs version that
-the feature's app release pins.
+Three refs, three meanings: a **feature branch** is a draft
+(invisible to every consumer), **`main`** is published (the
+website serves it live, within minutes), and a **tag** is the
+frozen snapshot an app release pins.
+
+Draft and revise on a branch; merge to `main` only when the
+content should be public.  Tag releases semver-style (`0.1.0`,
+`0.2.0`, …) — each app pins a tag in its package dependencies and
+adopts new content by bumping its pin on its own release
+schedule.  Write pages to describe **shipped** behavior;
+documentation for a new feature merges to `main` when that
+feature's app release ships, in the same docs version the app
+pins.
