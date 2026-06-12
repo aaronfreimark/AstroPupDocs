@@ -29,8 +29,6 @@ already-stretched results.
 
 ## The viewer
 
-![A monochrome sub frame open in the viewer, automatically stretched](images/view/viewer.png "A linear sub, auto-stretched for the screen")
-
 - **Pinch to zoom**, or double-tap to jump between fit and 100%.
 - The :sf:lightbulb: **stretch control** switches between
   **Stretched** and **Linear**.  A linear sub gets an automatic
