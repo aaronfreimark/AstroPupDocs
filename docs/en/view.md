@@ -13,6 +13,8 @@ everything the file knows about the night it was captured.
 
 ## Opening an image
 
+![The home screen: recent FITS files below the AstroPup View title card](images/view/launch.png)
+
 The home screen is a standard document browser: **Recents** shows
 what you've opened before, and **Browse** reaches the Files app —
 iCloud Drive, On My iPhone, or any connected file provider.  Tap a
@@ -26,6 +28,8 @@ session work as-is: lights, calibrated masters, and finished,
 already-stretched results.
 
 ## The viewer
+
+![A monochrome sub frame open in the viewer, automatically stretched](images/view/viewer.png "A linear sub, auto-stretched for the screen")
 
 - **Pinch to zoom**, or double-tap to jump between fit and 100%.
 - The :sf:lightbulb: **stretch control** switches between
@@ -55,6 +59,8 @@ file's header declares, in two tabs.
 - **Image** — dimensions, channels, bit depth, and file size.
 
 ### Analysis
+
+![The Analysis tab: stars, FWHM, eccentricity, and SNR for the open frame](images/view/analysis.png)
 
 The Analysis tab measures the frame the first time you open it:
 
