@@ -5,14 +5,12 @@ title: AstroPup Horizon Documentation
 
 # AstroPup Horizon
 
-AstroPup Horizon records the actual skyline at your observing site —
-trees, rooftops, mountains and all — by sweeping your phone around
-the horizon once.  The app traces the silhouette with a
-depth-sensing machine-learning model, lets you fine-tune it by hand,
-and exports it to the planetarium software you already use:
-Stellarium, SkySafari, N.I.N.A., and Cartes du Ciel.  If you also
-use **AstroPup Sky**, every horizon you capture syncs there
-automatically and shades its sky chart.
+AstroPup Horizon records the real skyline at your observing site —
+trees, rooftops, and all.  Sweep your phone around the horizon
+once; the app traces the silhouette with machine learning, lets you
+fix it by hand, and exports to Stellarium, SkySafari, N.I.N.A., and
+Cartes du Ciel.  Horizons sync automatically to **AstroPup Sky**,
+where they shade its sky chart.
 
 On iPad the same tools are arranged for the larger screen: your
 horizons live in a sidebar on the left, and the selected horizon
@@ -22,28 +20,21 @@ fills the panel beside it.
 
 ![The home screen: a list of captured horizons, each with a small polar thumbnail and capture date](images/horizon/horizons-list.png)
 
-The home screen lists every horizon on your iCloud account, grouped
-by what each one needs:
+The home screen lists every horizon on your iCloud account:
 
-- **Horizons** — captured and analyzed, ready to use and export.
-  Each row's circular thumbnail is a miniature of the horizon
-  itself: the green silhouette is the sky your site actually
-  blocks.  The :sf:pano: glyph marks horizons that carry a stitched
+- **Horizons** — ready to use and export.  The circular thumbnail
+  is the horizon itself; the :sf:pano: glyph marks a saved
   panorama.
-- **Needs Analysis** — captures whose frames are saved but whose
-  horizon hasn't been traced yet (for example, if analysis was
-  interrupted).  Tap one to run the analysis.
-- **Missing Horizons** — observing sites without a capture,
-  typically sites created in AstroPup Sky.  Open one and tap
-  **Add Horizon** to capture its skyline.
+- **Needs Analysis** — saved captures awaiting analysis.  Tap one
+  to run it.
+- **Missing Horizons** — sites without a capture yet, usually
+  created in AstroPup Sky.  Open one and tap **Add Horizon**.
 
-Swipe any row for **Rename** and **Delete**, or long-press for the
-same options.  Deleting removes the site from every AstroPup app on
-your account, so the app always asks before going through with it.
+Swipe or long-press a row to **Rename** or **Delete**.  Deleting
+removes the site from every AstroPup app, so the app asks first.
 
-To start a brand-new capture, tap the camera button in the top-right
-corner.  **Tips** in the top-left reviews the advice for a clean
-capture before you head outside.
+The camera button in the top-right starts a new capture; **Tips**
+in the top-left reviews the advice for a clean one.
 
 ## Capturing a horizon
 
@@ -174,9 +165,10 @@ device signed into your iCloud account.
 
 ## Tips
 
-- **Capture at the telescope's spot, not near it.**  A few steps
+- **Capture from the telescope's point of view.**  A few steps
   sideways can move a tree from blocking Polaris to missing it
-  entirely.  Stand exactly where the mount goes.
+  entirely.  Lift the telescope off its mount and capture standing
+  right where it sits — the phone sees what the scope will see.
 - **Take the calibration seriously.**  A compass error rotates the
   whole horizon — thirty extra seconds of figure-8s pays for itself
   every time Sky tells you when a target clears your roofline.
