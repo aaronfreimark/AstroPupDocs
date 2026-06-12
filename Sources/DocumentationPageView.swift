@@ -14,9 +14,15 @@
 /// `Image(systemName:)` runs, and image blocks load from the docs
 /// bundle with the alt text as the accessibility label and the
 /// optional title as a visible caption.
-#if canImport(UIKit)
+// Cross-platform: iOS hosts this in a sheet (Sky, View), macOS in an
+// auxiliary window (Blink) — only the bitmap type differs (UIImage /
+// NSImage); everything else is shared SwiftUI.
 import SwiftUI
+#if canImport(UIKit)
 import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 
 public struct DocumentationPageView: View {
 
@@ -87,11 +93,9 @@ private struct DocumentationBlockView: View {
             }
 
         case .image(let path, let alt, let caption):
-            if let url = AstroPupDocs.imageURL(forDocsRelativePath: path),
-               let uiImage = UIImage(contentsOfFile: url.path)
-            {
+            if let image = Self.bitmap(forDocsRelativePath: path) {
                 VStack(alignment: .center, spacing: 6) {
-                    Image(uiImage: uiImage)
+                    image
                         .resizable()
                         .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 8))
@@ -155,5 +159,19 @@ private struct DocumentationBlockView: View {
         default: 8
         }
     }
+
+    /// A docs-bundle bitmap as a SwiftUI `Image` — the one spot the
+    /// platforms diverge (UIImage vs NSImage file loading).
+    private static func bitmap(forDocsRelativePath path: String) -> Image? {
+        guard let url = AstroPupDocs.imageURL(forDocsRelativePath: path) else { return nil }
+        #if canImport(UIKit)
+        guard let image = UIImage(contentsOfFile: url.path) else { return nil }
+        return Image(uiImage: image)
+        #elseif canImport(AppKit)
+        guard let image = NSImage(contentsOfFile: url.path) else { return nil }
+        return Image(nsImage: image)
+        #else
+        return nil
+        #endif
+    }
 }
-#endif
