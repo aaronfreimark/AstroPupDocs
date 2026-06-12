@@ -32,7 +32,7 @@ let package = Package(
         .target(
             name: "AstroPupDocs",
             path: ".",
-            exclude: ["README.md", "WEBSITE.md", "Tests", "scripts"],
+            exclude: ["README.md", "WEBSITE.md", "APPS.md", "Tests", "scripts"],
             sources: ["Sources"],
             resources: [.copy("docs")]
         ),
