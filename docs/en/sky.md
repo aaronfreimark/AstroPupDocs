@@ -1,6 +1,6 @@
 ---
 id: sky
-title: AstroPup Sky Guide
+title: AstroPup Sky Documentation
 ---
 
 # AstroPup Sky
