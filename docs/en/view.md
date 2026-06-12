@@ -42,6 +42,8 @@ already-stretched results.
 
 ## Image info
 
+![The info sheet: target details, a star chart of the pointing, and observatory information](images/view/info.png)
+
 Tap :sf:info: (iPhone) or open the sidebar (iPad) for everything the
 file's header declares, in two tabs.
 
