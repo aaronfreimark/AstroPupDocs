@@ -41,6 +41,10 @@ in the top-left reviews the advice for a clean one.
 A capture is a single slow turn in place — about a minute, start to
 finish.
 
+![The figure-8 calibration prompt with the compass accuracy meter](images/horizon/capture-calibration.png)
+
+![The Start Capture button over the live camera view](images/horizon/capture-start.jpg)
+
 1. **Calibrate the compass.**  Wave the phone in a figure-8 until
    the accuracy meter fills.  The horizon's compass alignment is
    only as good as this step, so it's worth a few seconds of
@@ -54,6 +58,8 @@ finish.
 3. **Finish the loop.**  When you've come full circle the capture
    stops by itself — green check, done.  Analysis starts
    immediately.
+
+![The checkered finish flag planted at the start position, with the rotation gauge nearly complete](images/horizon/capture-finish.jpg "Coming back around: the checkered flag marks where you started")
 
 A few habits make a visible difference: stand where you'd actually
 set up the telescope, keep an even pace, and avoid leaning or
