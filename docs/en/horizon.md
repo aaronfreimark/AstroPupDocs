@@ -8,9 +8,9 @@ title: AstroPup Horizon Documentation
 AstroPup Horizon records the real skyline at your observing site —
 trees, rooftops, and all.  Sweep your phone around the horizon
 once; the app traces the silhouette with machine learning, lets you
-fix it by hand, and exports to Stellarium, SkySafari, N.I.N.A., and
-Cartes du Ciel.  Horizons sync automatically to **AstroPup Sky**,
-where they shade its sky chart.
+fix it by hand, and exports it to your planetarium software.
+Horizons sync automatically to **AstroPup Sky**, where they shade
+its sky chart.
 
 On iPad the same tools are arranged for the larger screen: your
 horizons live in a sidebar on the left, and the selected horizon
