@@ -53,7 +53,17 @@ incorrectly in at least one consumer.
 4. **Image files**: ≤ 1200 px on the long side, compressed (PNG for
    UI screenshots is fine; keep each file roughly ≤ 200 KB).  They
    ship inside the app binaries.
-5. **Front matter** opens every page:
+5. **Inline SF Symbols** — the one extension beyond CommonMark.
+   `:sf:symbol.name:` inline in a paragraph or bullet renders the
+   native SF Symbol in the apps; the website replaces the token
+   with `<img>` of the matching pre-rendered glyph at
+   `images/sf/<symbol.name>.png` (white on transparent, sized for
+   dark backgrounds).  Two rules: use sparingly — only where the
+   text names a button the reader must find — and every symbol
+   used must have its PNG committed (regenerate with AppKit's
+   `NSImage(systemSymbolName:)`; the apps' contract tests fail on
+   missing files).
+6. **Front matter** opens every page:
 
    ```
    ---

@@ -84,15 +84,15 @@ hour after dusk, it goes to the front of the queue.
 
 The toolbar holds the chart's controls:
 
-- **Shading** — switch between the three shading modes above.
-- **Filters** — show or hide object types (galaxies, nebulae,
+- **Shading** :sf:clock: — switch between the three shading modes above.
+- **Filters** :sf:line.3.horizontal.decrease: — show or hide object types (galaxies, nebulae,
   clusters…), planets, and comets; limit to favorites; hide
   targets you've already imaged.
-- **Apparent size** — a slider that hides targets smaller than a
+- **Apparent size** :sf:circle.dotted.circle: — a slider that hides targets smaller than a
   chosen fraction of your field of view, with a live preview.
-- **More (…)** — Settings, this documentation, credits, release
+- **More** :sf:ellipsis: — Settings, this documentation, credits, release
   notes, and a one-tap feedback email.
-- **Targets (magnifier)** — the full target list, below.
+- **Targets** :sf:magnifyingglass: — the full target list, below.
 
 ## Targets list
 
@@ -122,11 +122,19 @@ card:
   phases.  Comets show a top-down orbit map with distances and the
   perihelion date.  **Tap a planet or comet preview** to open it
   full screen with a date slider and watch it change over time.
-- **Favorites and imaged flags**: the star marks a favorite; the
-  camera marks targets you've already imaged.  Both sync through
+- **Favorites and imaged flags**: the star :sf:star.fill: marks a favorite;
+  the camera :sf:photo.badge.checkmark.fill: marks targets you've already imaged.  Both sync through
   iCloud to your other devices, and both drive chart filters — so
   your imaging queue follows you.
 - **Wikipedia** for the deeper dive.
+
+A few of those previews, worth seeking out:
+
+![Saturn with its rings drawn at the current tilt, ring shadow and Cassini division visible](images/planet-saturn.png)
+
+![Jupiter with tonight's positions of Io, Europa, Ganymede, and Callisto, labeled](images/planet-jupiter.png)
+
+![Top-down comet orbit map showing the Sun, Earth's orbit, the comet with its tail, distances, and the perihelion date](images/comet-orbit.png)
 
 ## Settings
 
@@ -165,12 +173,3 @@ app every week or so; Sky reminds you if they go stale.
   minimum-altitude floor for sites without a captured horizon.
 - **Night definition** — which twilight bounds the dark window,
   from sunset/sunrise to full astronomical darkness.
-
-## Tips
-
-- Shading too loud or too quiet?  The **opacity slider** in
-  Settings → Chart fades it under the stars.
-- Everything follows the **planning date** in the weather strip —
-  step forward a few nights and watch the gold regions move.
-- The shading is the map; the altitude chart on each target's
-  detail sheet is the itinerary.
