@@ -7,78 +7,160 @@ title: AstroPup Sky Documentation
 
 AstroPup Sky plans tonight's deep-sky imaging session: a full-disc
 star chart of your sky, shaded by when targets are visible from
-*your* observing site — local horizon, weather, and all.
+*your* observing site — local horizon, weather, and all.  This page
+walks the screen top to bottom, then follows the taps deeper.
 
-## Chart shading modes
+On iPad the same tools are arranged for the larger screen: filters
+live in a sidebar on the left, and object details open in a panel
+beside the chart instead of a sheet.
 
-The sky chart can tint the background so you can answer one planning
-question at a glance.  Pick the mode from the shading button in the
-toolbar; a legend at the bottom of the chart explains the colors for
+## Weather strip
+
+![Weather strip showing a clear night hour by hour, with sunset and sunrise times](images/weather-strip.png)
+
+The strip across the top is tonight's forecast, one icon per hour
+from sunset to sunrise — a moon for clear hours, clouds, rain, or
+snow otherwise.  Most of it is tappable:
+
+- **Tap any hour** for the details behind the icon: cloud cover,
+  precipitation, wind, temperature, dew point, and humidity.
+- **Tap the chevrons** at either edge to step the planning date a
+  day at a time, or **tap the date** to jump to any night.  The
+  whole app — chart, shading, target list — follows the planning
+  date.
+- **Tap the site name** to open Settings and switch sites.
+
+Forecasts come from Open-Meteo and are cached, so a brief network
+outage shows the last known forecast rather than nothing.
+
+## Sky chart
+
+The chart is your whole sky at once: the edge of the disc is your
+horizon, the center is straight up.  Deep-sky objects appear as
+catalog symbols, planets as colored discs, comets with a small
+anti-sunward tail, and the Moon with its current phase.
+
+- **Pinch** to zoom and **drag** to pan.
+- **Tap any object** for its detail sheet.
+- **Tap empty sky** to dismiss a selection.
+- **Tap the blue rectangle** — your telescope's field of view, to
+  scale — to cycle between saved FOV presets.
+
+The background tinting is the chart's superpower: it answers a
+planning question at a glance.  The default mode shades by **hours
+above the horizon** tonight; the legend below the chart explains
 whichever mode is active.
 
-All three modes respect your site's horizon: if a tree or building
-blocks part of your sky, time spent hidden behind it doesn't count as
-visible — the shading matches what you'd actually see from your
-observing spot.
+## Shading legend
 
-### Hours above horizon
-
-Answers *"how long is a target up tonight?"*  Each region of sky is
-colored by the number of hours it spends above your local horizon
-during darkness — deeper colors for shorter visits, brighter colors
-for longer ones.
+All three modes respect your site's horizon — time a target spends
+hidden behind your trees doesn't count as visible.
 
 ![Hours-above-horizon legend showing colors for one through seven hours and a gold tile for all night](images/shading-legend-hours.png)
 
-The pale gold tile is special: it marks sky that stays up **all
-night**, from dusk to dawn.  Targets there can be imaged whenever
-your schedule allows.
+**Hours above horizon** colors each region of sky by how long it's
+up during darkness.  The pale gold tile marks sky that stays up
+**all night**, dusk to dawn — image those targets whenever your
+schedule allows.
 
-### Rises
+![Rises legend showing hour-by-hour rise time buckets](images/shading-legend-rises.png)
 
-Answers *"when does this part of the sky come up?"*  Colors are
-bucketed by rise time — the warm anchor color marks sky that was
-already up at sunset, and each step through the palette is one hour
-later in the night.  Useful for planning the second half of a
-session: anything in the late buckets is what you'll be waiting on.
+**Rises** answers "when does this part of the sky come up?"  The
+warm anchor color is sky already up at sunset; each step is one
+hour later in the night.  Anything in the late buckets is what
+you'll be waiting on after midnight.
 
-### Sets
+![Sets legend showing hour-by-hour set time buckets](images/shading-legend-sets.png)
 
-The mirror of Rises: *"when does this part of the sky go down?"*  The
-anchor color marks sky that is still up at sunrise; each palette step
-is one hour earlier in the night.  Check your target's color before
-setting up — if it sets an hour after dusk, it goes to the front of
-the queue.
+**Sets** is the mirror: the anchor color is sky still up at
+sunrise; each step is one hour earlier.  If your target sets an
+hour after dusk, it goes to the front of the queue.
 
-## Horizon files
+## Toolbar
 
-A horizon file is a 360° profile of the trees, hills, and rooftops
-around your observing site — the *real* skyline, not the ideal flat
-horizon.  Horizons are captured with **AstroPup Horizon**, a
-companion app: stand at your observing spot and sweep the phone
-around the compass for about a minute.  The result syncs through
-iCloud and appears in Sky automatically.
+The toolbar holds the chart's controls:
 
-Once a site has a horizon:
+- **Shading** — switch between the three shading modes above.
+- **Filters** — show or hide object types (galaxies, nebulae,
+  clusters…), planets, and comets; limit to favorites; hide
+  targets you've already imaged.
+- **Apparent size** — a slider that hides targets smaller than a
+  chosen fraction of your field of view, with a live preview.
+- **More (…)** — Settings, this documentation, credits, release
+  notes, and a one-tap feedback email.
+- **Targets (magnifier)** — the full target list, below.
 
-- **Altitude charts** in the object detail sheet shade the region
-  below your skyline, so you can see exactly when a target clears
-  the trees and when it drops behind them.
-- **Chart shading** counts only time spent above your real horizon.
-- **Tonight's visibility** in the Targets list reflects the same
-  rule, so sorting by visible hours puts genuinely observable
-  targets first.
+## Targets list
 
-Sites without a horizon use a flat, unobstructed skyline.  You can
-also set a simple **minimum altitude** in Settings → Chart, which
-raises the working horizon uniformly without capturing a profile.
+Everything visible tonight, as a list.  Each row carries a
+**visibility timeline** — a bar showing exactly when that target is
+above your horizon during the night — plus its type, brightness,
+and size.  Sort by hours visible, size, brightness, or name; search
+covers the entire catalog, including targets your filters currently
+hide.  Planets and comets get their own sections at the top.  Tap
+any row for the detail sheet.
+
+## Object detail
+
+Tap any target — on the chart or in the list — for its planning
+card:
+
+- **Altitude chart**: the target's path across tonight's sky, with
+  the dark window, your horizon profile, and its best visibility
+  span called out.  Rise, set, and transit times sit below.
+- **Preview**: deep-sky objects show survey photography sized
+  against your field of view.  Planets show what matters tonight —
+  Saturn's ring tilt, Jupiter's moon line-up, Mercury and Venus
+  phases.  Comets show a top-down orbit map with distances and the
+  perihelion date.  **Tap a planet or comet preview** to open it
+  full screen with a date slider and watch it change over time.
+- **Favorites and imaged flags**: the star marks a favorite; the
+  camera marks targets you've already imaged.  Both sync through
+  iCloud to your other devices, and both drive chart filters — so
+  your imaging queue follows you.
+- **Wikipedia** for the deeper dive.
+
+## Settings
+
+### Sites
+
+Your observing sites, synced through iCloud Drive to every device
+on your account.  Tap a site to edit its name and location, and to
+manage the two features worth setting up:
+
+**A horizon profile.**  Capture one with the companion app
+**AstroPup Horizon** — stand at your spot and sweep the phone
+around the skyline for about a minute.  It syncs back to Sky
+automatically, and from then on every altitude chart, shading mode,
+and visibility number reflects your *actual* sky instead of an
+ideal flat horizon.  If you set up only one thing, make it this.
+
+**Clear-sky alerts.**  Flip on *Alert for clear skies* and Sky
+sends a morning notification when tonight — or an upcoming night —
+looks clear at that site.  Notifications and Background App Refresh
+must be allowed, and forecasts stay fresh as long as you open the
+app every week or so; Sky reminds you if they go stale.
+
+### Everything else
+
+- **Clear sky notifications** — choose the delivery hour and how
+  much cloud cover still counts as "clear."
+- **Field of View** — save a preset per telescope or lens; the
+  active one draws on the chart, and tapping the blue rectangle
+  cycles through them.
+- **Comets** — comets brighter than the magnitude threshold appear
+  automatically; the catalog updates weekly from the Minor Planet
+  Center, with a manual refresh button.
+- **Chart** — shading opacity, color scheme, grid style, and a
+  minimum-altitude floor for sites without a captured horizon.
+- **Night definition** — which twilight bounds the dark window,
+  from sunset/sunrise to full astronomical darkness.
 
 ## Tips
 
-- The **opacity slider** in Settings → Chart fades the shading so
-  stars and targets stay readable underneath.
-- Shading always describes the **planning date** shown in the
-  weather strip — step to a different night and the bands update.
-- An object's exact rise, set, and visible hours are on its detail
-  sheet, in the altitude chart.  The shading is the map; the detail
-  sheet is the itinerary.
+- Shading too loud or too quiet?  The **opacity slider** in
+  Settings → Chart fades it under the stars.
+- Everything follows the **planning date** in the weather strip —
+  step forward a few nights and watch the gold regions move.
+- The shading is the map; the altitude chart on each target's
+  detail sheet is the itinerary.
