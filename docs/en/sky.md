@@ -173,3 +173,18 @@ app every week or so; Sky reminds you if they go stale.
   minimum-altitude floor for sites without a captured horizon.
 - **Night definition** — which twilight bounds the dark window,
   from sunset/sunrise to full astronomical darkness.
+
+## Tips
+
+- **Capture your local horizon — it's the single best upgrade.**
+  With a horizon profile, every shading mode, visibility timeline,
+  and rise and set time reflects the sky you actually have, trees
+  and rooftops included.  The companion app **AstroPup Horizon**
+  records one in about a minute of sweeping your phone around the
+  skyline, and it syncs to Sky automatically.
+- **Plan by clear night, not by tonight.**  Step the planning date
+  forward with the weather strip's chevrons until you find a clear
+  night — the chart, shading, and target list all follow.
+- **Let the filters run your imaging queue.**  Mark favorites and
+  flag targets you've imaged, then filter to favorites and hide
+  imaged — the chart shows only what's left to shoot.

@@ -71,7 +71,7 @@ private struct DocumentationBlockView: View {
         case .heading(let level, let text):
             Text(text)
                 .font(headingFont(level))
-                .padding(.top, level == 1 ? 0 : 8)
+                .padding(.top, headingTopPadding(level))
 
         case .paragraph(let markdown):
             inlineText(markdown)
@@ -142,6 +142,17 @@ private struct DocumentationBlockView: View {
         case 1:  .title2.bold()
         case 2:  .title3.bold()
         default: .headline
+        }
+    }
+
+    /// Extra space above a heading (added to the page's block
+    /// spacing).  `##` section titles get a markedly larger gap so
+    /// the page's major sections read at a glance while scrolling.
+    private func headingTopPadding(_ level: Int) -> CGFloat {
+        switch level {
+        case 1:  0
+        case 2:  24
+        default: 8
         }
     }
 }
