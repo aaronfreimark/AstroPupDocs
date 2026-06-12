@@ -32,9 +32,14 @@ let package = Package(
         .target(
             name: "AstroPupDocs",
             path: ".",
-            exclude: ["README.md"],
+            exclude: ["README.md", "Tests", "scripts"],
             sources: ["Sources"],
             resources: [.copy("docs")]
+        ),
+        .testTarget(
+            name: "AstroPupDocsTests",
+            dependencies: ["AstroPupDocs"],
+            path: "Tests"
         ),
     ]
 )
