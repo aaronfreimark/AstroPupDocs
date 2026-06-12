@@ -13,12 +13,11 @@ Author `docs/en/<app>.md` (slug = lowercase app name: `view`,
 screen top to bottom, then follow the taps deeper, with a
 screenshot for each major section.
 
-- **Namespace your images.**  `docs/images/` is one flat space
-  shared by every app, and Sky already claimed generic names
-  (`toolbar.png`, `targets-list.png`, …).  Prefix new files with
-  the app slug — `view-toolbar.png` — or use a subfolder
-  (`images/view/toolbar.png`); both render fine, since paths are
-  just docs-root-relative.
+- **Namespace your images.**  Each app's screenshots live in a
+  per-app subfolder named for its slug — Sky's are under
+  `images/sky/`, yours go under `images/<app>/`.  Only the
+  shared SF Symbol glyphs (`images/sf/`) sit outside the per-app
+  folders.
 - Screenshots: dark-mode iPhone captures, ≤ 1200 px on the long
   side after downscaling, roughly ≤ 200 KB each.
 - Inline SF Symbols (`:sf:symbol.name:`) need their PNG committed

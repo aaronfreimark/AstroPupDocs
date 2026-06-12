@@ -56,10 +56,11 @@ incorrectly in at least one consumer.
    `figcaption` on the web.
 3. **Image paths are relative to the `docs/` root** — always
    `images/<name>.png`, regardless of which locale folder the page
-   lives in.  `images/` is one flat namespace shared by every
-   app's page: prefix new files with the app slug
-   (`view-toolbar.png`) or use a per-app subfolder.  (Sky's
-   images predate this rule and keep their generic names.)
+   lives in.  `images/` is shared by every app's page: each
+   app's screenshots live in a per-app subfolder named for its
+   slug — `images/sky/weather-strip.png`,
+   `images/view/<name>.png`, … — alongside the shared
+   `images/sf/` symbol glyphs.
 4. **Image files**: ≤ 1200 px on the long side, compressed (PNG for
    UI screenshots is fine; keep each file roughly ≤ 200 KB).  They
    ship inside the app binaries.

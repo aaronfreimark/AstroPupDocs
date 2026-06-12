@@ -16,7 +16,7 @@ beside the chart instead of a sheet.
 
 ## Weather strip
 
-![Weather strip showing a clear night hour by hour, with sunset and sunrise times](images/weather-strip.png)
+![Weather strip showing a clear night hour by hour, with sunset and sunrise times](images/sky/weather-strip.png)
 
 The strip across the top is tonight's forecast, one icon per hour
 from sunset to sunrise — a moon for clear hours, clouds, rain, or
@@ -35,7 +35,7 @@ outage shows the last known forecast rather than nothing.
 
 ## Sky chart
 
-![The main screen: weather strip above a full-disc sky chart with a horizon silhouette, hours-above-horizon shading, legend, and toolbar](images/sky-chart.png)
+![The main screen: weather strip above a full-disc sky chart with a horizon silhouette, hours-above-horizon shading, legend, and toolbar](images/sky/sky-chart.png)
 
 The chart is your whole sky at once: the edge of the disc is your
 horizon, the center is straight up.  Deep-sky objects appear as
@@ -58,21 +58,21 @@ whichever mode is active.
 All three modes respect your site's horizon — time a target spends
 hidden behind your trees doesn't count as visible.
 
-![Hours-above-horizon legend showing colors for one through seven hours and a gold tile for all night](images/shading-legend-hours.png)
+![Hours-above-horizon legend showing colors for one through seven hours and a gold tile for all night](images/sky/shading-legend-hours.png)
 
 **Hours above horizon** colors each region of sky by how long it's
 up during darkness.  The pale gold tile marks sky that stays up
 **all night**, dusk to dawn — image those targets whenever your
 schedule allows.
 
-![Rises legend showing hour-by-hour rise time buckets](images/shading-legend-rises.png)
+![Rises legend showing hour-by-hour rise time buckets](images/sky/shading-legend-rises.png)
 
 **Rises** answers "when does this part of the sky come up?"  The
 warm anchor color is sky already up at sunset; each step is one
 hour later in the night.  Anything in the late buckets is what
 you'll be waiting on after midnight.
 
-![Sets legend showing hour-by-hour set time buckets](images/shading-legend-sets.png)
+![Sets legend showing hour-by-hour set time buckets](images/sky/shading-legend-sets.png)
 
 **Sets** is the mirror: the anchor color is sky still up at
 sunrise; each step is one hour earlier.  If your target sets an
@@ -80,7 +80,7 @@ hour after dusk, it goes to the front of the queue.
 
 ## Toolbar
 
-![Toolbar with shading mode, filter, apparent size, more menu, and targets buttons](images/toolbar.png)
+![Toolbar with shading mode, filter, apparent size, more menu, and targets buttons](images/sky/toolbar.png)
 
 The toolbar holds the chart's controls:
 
@@ -96,7 +96,7 @@ The toolbar holds the chart's controls:
 
 ## Targets list
 
-![Targets list with search and per-target visibility timeline bars](images/targets-list.png)
+![Targets list with search and per-target visibility timeline bars](images/sky/targets-list.png)
 
 Everything visible tonight, as a list.  Each row carries a
 **visibility timeline** — a bar showing exactly when that target is
@@ -108,7 +108,7 @@ any row for the detail sheet.
 
 ## Object detail
 
-![Object detail for galaxy M101: altitude chart with visibility span, photo preview with field-of-view comparison, and rise, set, and transit facts](images/object-detail.png)
+![Object detail for galaxy M101: altitude chart with visibility span, photo preview with field-of-view comparison, and rise, set, and transit facts](images/sky/object-detail.png)
 
 Tap any target — on the chart or in the list — for its planning
 card:
@@ -130,17 +130,17 @@ card:
 
 A few of those previews, worth seeking out:
 
-![Saturn with its rings drawn at the current tilt, ring shadow and Cassini division visible](images/planet-saturn.png "Saturn's rings, drawn at their real tilt for the planning date")
+![Saturn with its rings drawn at the current tilt, ring shadow and Cassini division visible](images/sky/planet-saturn.png "Saturn's rings, drawn at their real tilt for the planning date")
 
-![Jupiter with tonight's positions of Io, Europa, Ganymede, and Callisto, labeled](images/planet-jupiter.png "Jupiter's Galilean moons, lined up as they'll appear tonight")
+![Jupiter with tonight's positions of Io, Europa, Ganymede, and Callisto, labeled](images/sky/planet-jupiter.png "Jupiter's Galilean moons, lined up as they'll appear tonight")
 
-![Top-down comet orbit map showing the Sun, Earth's orbit, the comet with its tail, distances, and the perihelion date](images/comet-orbit.png "A comet's orbit from above — Sun, Earth's orbit, distances, and days to perihelion")
+![Top-down comet orbit map showing the Sun, Earth's orbit, the comet with its tail, distances, and the perihelion date](images/sky/comet-orbit.png "A comet's orbit from above — Sun, Earth's orbit, distances, and days to perihelion")
 
 ## Settings
 
 ### Sites
 
-![Site editor showing the clear-sky alert toggle, location map, and horizon import options](images/site-detail.png)
+![Site editor showing the clear-sky alert toggle, location map, and horizon import options](images/sky/site-detail.png)
 
 Your observing sites, synced through iCloud Drive to every device
 on your account.  Tap a site to edit its name and location, and to
