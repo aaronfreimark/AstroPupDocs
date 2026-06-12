@@ -2,11 +2,11 @@
 
 Single source of truth for AstroPup user documentation, consumed by:
 
-- **AstroPup Sky** and **AstroPup Horizon** (iOS) — as a Swift
-  package dependency; the `docs/` tree ships inside each app via
-  `Bundle.module` and renders in the in-app Guide.
+- **The AstroPup apps** (iOS) — as a Swift package dependency; each
+  app's page ships inside its bundle via `Bundle.module` and renders
+  in the in-app Guide.
 - **astropup.app** (web) — as a git submodule; the site reads
-  `docs/` directly and renders each topic as a page.
+  `docs/` directly and renders each app's page.
 
 One commit here updates every surface: apps pick it up at their next
 release (bump the pinned package version), the website at its next
@@ -14,21 +14,29 @@ deploy.
 
 ## Layout
 
+**One page per app.**  Each app's entire guide is a single markdown
+file, named for the app:
+
 ```
 docs/
-  en/                 ← topics, one markdown file each
-    shading-modes.md
-    horizons.md
+  en/
+    sky.md            ← AstroPup Sky
+    view.md           ← AstroPup View
+    blink.md          ← AstroPup Blink
+    horizon.md        ← AstroPup Horizon
   de/ … fr/ …         ← optional per-locale folders; consumers fall
-                        back to en/ for missing locales or topics
+                        back to en/ for missing locales or pages
   images/             ← screenshots shared by all locales
 ```
+
+Structure *within* a page comes from `##` / `###` sections — both
+renderers display them as headed sections of one scrolling document.
 
 ## Authoring contract
 
 Both renderers — `AttributedString(markdown:)` on iOS and
 react-markdown on the web — must handle every file, so the format is
-deliberately narrow.  A topic that violates these rules will render
+deliberately narrow.  A page that violates these rules will render
 incorrectly in at least one consumer.
 
 1. **CommonMark subset only.**  Allowed: `#`/`##`/`###` headings,
@@ -40,22 +48,17 @@ incorrectly in at least one consumer.
    required (it becomes the accessibility label in the apps and the
    `alt` attribute on the web).
 3. **Image paths are relative to the `docs/` root** — always
-   `images/<name>.png`, regardless of which locale folder the topic
+   `images/<name>.png`, regardless of which locale folder the page
    lives in.
 4. **Image files**: ≤ 1200 px on the long side, compressed (PNG for
    UI screenshots is fine; keep each file roughly ≤ 200 KB).  They
-   ship inside both app binaries.
-5. **Front matter** opens every topic:
+   ship inside the app binaries.
+5. **Front matter** opens every page:
 
    ```
    ---
-   id: shading-modes        ← stable identifier; never changes once
-                              shipped (used for deep links)
-   title: Chart shading modes
-   order: 10                ← topic-list sort key; gaps of 10 leave
-                              room for insertions
-   apps: sky                ← which apps show the topic: `sky`,
-                              `horizon`, or `sky, horizon`
+   id: sky                  ← the app slug; matches the filename
+   title: AstroPup Sky Guide
    ---
    ```
 
@@ -65,6 +68,9 @@ incorrectly in at least one consumer.
 
 ## Releasing
 
-Tag releases semver-style (`0.1.0`, `0.2.0`, …).  The apps pin a tag
-in their package dependencies — content edits land on `main` freely,
-and an app adopts them by bumping its pinned version.
+Tag releases semver-style (`0.1.0`, `0.2.0`, …).  Each app pins a tag
+in its package dependencies — content edits land on `main` freely,
+and an app adopts them by bumping its pinned version on its own
+release schedule.  Write pages to describe **shipped** behavior;
+documentation for a new feature lands in the same docs version that
+the feature's app release pins.
