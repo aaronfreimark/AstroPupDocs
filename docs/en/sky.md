@@ -16,11 +16,15 @@ beside the chart instead of a sheet.
 
 ## Weather strip
 
-![Weather strip showing a clear night hour by hour, with sunset and sunrise times](images/sky/weather-strip.png)
+![Weather strip showing a clear night hour by hour, with a green wind glyph, an uncertainty marker, the current-time line, and sunset and sunrise times](images/sky/weather-strip.png)
 
 The strip across the top is tonight's forecast, one icon per hour
 from sunset to sunrise — a moon for clear hours, clouds, rain, or
-snow otherwise.  Most of it is tappable:
+snow otherwise.  A soft glow marks the hours around sunset and
+sunrise, a thin line tracks the current time as it crosses, and a
+green wind glyph flags any hour with gear-threatening wind.  On long
+winter nights the strip folds into tidy two-hour steps so nothing
+crowds.  Most of it is tappable:
 
 - **Tap any hour** for the details behind the icon: cloud cover,
   precipitation, wind, temperature, dew point, and humidity.
@@ -30,8 +34,12 @@ snow otherwise.  Most of it is tappable:
   date.
 - **Tap the site name** to open Settings and switch sites.
 
-Forecasts come from Open-Meteo and are cached, so a brief network
-outage shows the last known forecast rather than nothing.
+Each hour blends six global weather models — Europe's ECMWF, NOAA's
+GFS, and the German, Canadian, and UK models among them — into one
+consensus that's steadier than any single model.  When the models
+disagree about an hour, the strip marks it with a small **?** and
+leans the icon toward clear.  Forecasts are cached, so a brief
+network outage shows the last known forecast rather than nothing.
 
 ## Sky chart
 
@@ -136,6 +144,25 @@ A few of those previews, worth seeking out:
 
 ![Top-down comet orbit map showing the Sun, Earth's orbit, the comet with its tail, distances, and the perihelion date](images/sky/comet-orbit.png "A comet's orbit from above — Sun, Earth's orbit, distances, and days to perihelion")
 
+## Widgets
+
+![Two home-screen widgets: a small Tonight's Verdict reading Clear tonight, 6h clear, beside a medium Tonight's Weather showing the hour-by-hour strip with the current-time line](images/sky/widgets.png)
+
+Put tonight's plan on your home or lock screen.  Add one the usual
+way — long-press the home screen, tap **+**, and search for
+**AstroPup Sky**:
+
+- **Tonight's Weather** mirrors the in-app strip — the cloud
+  forecast across tonight's observing window, current-time line and
+  all.
+- **Tonight's Verdict** is the one-glance call: clear, mixed, or
+  cloudy, with the headline and how long the clear stretch lasts.
+
+Both come in home-screen and lock-screen sizes, each can be pinned
+to a specific site (or follow your active one), and tapping either
+opens Sky to that night.  They refresh in the background and
+whenever you open the app.
+
 ## Settings
 
 ### Sites
@@ -159,16 +186,30 @@ looks clear at that site.  Notifications and Background App Refresh
 must be allowed, and forecasts stay fresh as long as you open the
 app every week or so; Sky reminds you if they go stale.
 
+### Weather
+
+![Weather settings: precipitation, wind, and cloud-cover thresholds, each a slider](images/sky/settings-weather.png)
+
+Three sliders set what *you* count as a no-go.  They color the
+weather strip and drive the clear-sky verdict and its alerts:
+
+- **Precipitation** and **Wind** — the rain chance and wind speed
+  past which an hour counts as poor.  Windy hours also flag a green
+  glyph on the strip and can trigger a "Windy tonight" alert.
+- **Clouds** — the band from "clear enough" to "too cloudy," so
+  partly-cloudy hours read as borderline rather than all-or-nothing.
+
+Clear-sky alerts are switched on per site (above); here you also
+pick the delivery hour.
+
 ### Everything else
 
-- **Clear sky notifications** — choose the delivery hour and how
-  much cloud cover still counts as "clear."
 - **Field of View** — save a preset per telescope or lens; the
   active one draws on the chart, and tapping the blue rectangle
   cycles through them.
-- **Comets** — comets brighter than the magnitude threshold appear
-  automatically; the catalog updates weekly from the Minor Planet
-  Center, with a manual refresh button.
+- **Times** — show every clock readout in your device's time or the
+  selected site's local time — handy when you're planning a night at
+  a site in another time zone.
 - **Chart** — shading opacity, color scheme, grid style, and a
   minimum-altitude floor for sites without a captured horizon.
 - **Night definition** — which twilight bounds the dark window,
