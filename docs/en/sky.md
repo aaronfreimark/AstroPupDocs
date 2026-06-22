@@ -93,9 +93,9 @@ hour after dusk, it goes to the front of the queue.
 The toolbar holds the chart's controls:
 
 - :sf:clock: **Shading** — switch between the three shading modes above.
-- :sf:line.3.horizontal.decrease: **Filters** — show or hide object types (galaxies, nebulae,
-  clusters…), planets, and comets; limit to favorites; hide
-  targets you've already imaged.
+- :sf:line.3.horizontal.decrease: **Filters** — show or hide object types (galaxies, bright
+  and dark nebulae, planetary nebulae, clusters…), planets, and
+  comets; limit to favorites; hide targets you've already imaged.
 - :sf:circle.dotted.circle: **Apparent size** — a slider that hides targets smaller than a
   chosen fraction of your field of view, with a live preview.
 - :sf:ellipsis: **More** — Settings, this documentation, credits, release
