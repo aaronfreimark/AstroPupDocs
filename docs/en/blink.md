@@ -29,7 +29,9 @@ A few things worth knowing about the scan:
 - Dropping a **handful of files** (more than five) instead of a
   folder opens a review of exactly those frames — your good/bad
   calls are remembered for the folder either way.
-- A single image opens in the plain viewer, just like AstroPup View.
+- A single image opens in the plain viewer, just like AstroPup View —
+  open a flat there and you get the same dust analysis (dust motes and
+  their distance from the sensor).
 
 ## The review window
 

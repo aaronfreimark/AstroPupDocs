@@ -49,6 +49,7 @@ file's header declares, in two tabs.
 
 ### FITS Header
 
+- **Frame type** — Light, Flat, Dark, or Bias, read from the header.
 - **Target** — object name, exposure, the filter (colour-coded the
   way astro filters usually are: red for R or SII, green for G,
   deep red for Ha, teal for OIII…), and the observation date and
@@ -75,6 +76,24 @@ The Analysis tab measures the frame the first time you open it:
 These are raw measurements of the open file — handy for judging a
 single sub on the spot.  (For triaging a whole night of subs at
 once, that's our Mac app **AstroPup Blink**.)
+
+## Dust analysis
+
+Open a **flat** and View checks it for dust.  Dust on the sensor window
+or a filter casts a soft, out-of-focus shadow — a faint "donut" — across
+a flat frame.  View finds those shadows, measures each one, and uses the
+focal ratio from the header to estimate **how far the dust sits in front
+of the sensor**:
+
+- A **Dust Analysis** tab lists the shadows grouped by distance.  Roughly
+  1–2 mm is the sensor window; larger distances point to a filter or
+  further out in the optical path — so you know *which surface to clean*.
+- **Show on image** rings each detected mote so you can find it.
+
+This needs a flat (`IMAGETYP = Flat`) whose header records the focal ratio
+(`FOCRATIO` / `FNUMBER`) and the pixel size — NINA and most capture
+software write these.  It works the same when you open a single flat in
+**AstroPup Blink**.
 
 ## The More menu
 
