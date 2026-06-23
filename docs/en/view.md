@@ -79,16 +79,29 @@ once, that's our Mac app **AstroPup Blink**.)
 
 ## Dust analysis
 
-Open a **flat** and View checks it for dust.  Dust on the sensor window
-or a filter casts a soft, out-of-focus shadow — a faint "donut" — across
-a flat frame.  View finds those shadows, measures each one, and uses the
-focal ratio from the header to estimate **how far the dust sits in front
-of the sensor**:
+Open a **flat** and View checks it for dust.  Dust on the sensor window,
+a filter, or another surface casts a soft, out-of-focus shadow — a faint
+"donut" — across a flat frame.  View finds those shadows, measures each
+one, and uses the focal ratio from the header to work out **how far the
+dust sits in front of the sensor**.
 
-- A **Dust Analysis** tab lists the shadows grouped by distance.  Roughly
-  1–2 mm is the sensor window; larger distances point to a filter or
-  further out in the optical path — so you know *which surface to clean*.
-- **Show on image** rings each detected mote so you can find it.
+![The Dust Analysis tab: dust shadows grouped into surfaces by distance, each ringed on the flat in its own colour](images/view/dust.png "Two dusty surfaces — a filter near 10 mm and glass around 24 mm out")
+
+Because every glass surface sits at a fixed distance, its dust casts
+shadows of one characteristic size — so View groups what it finds into
+**surfaces**, each shown in its own colour:
+
+- The **Dust Analysis** tab lists those surfaces by distance from the
+  sensor, with a shadow count for each, so you know *which piece of glass
+  to clean*.  Roughly 1–2 mm is the sensor window; larger distances point
+  to a filter or further out in the optical path.
+- Each shadow is **ringed on the image** in its surface's colour — the
+  switch beside the heading turns the rings on and off.
+
+Open a flat with dust and View goes straight to this tab and fits the
+whole frame, so the rings are there at a glance.  It flags the clear,
+confident donuts rather than every faint speck — a few per surface is all
+it takes to pin down the surface.
 
 This needs a flat (`IMAGETYP = Flat`) whose header records the focal ratio
 (`FOCRATIO` / `FNUMBER`) and the pixel size — NINA and most capture

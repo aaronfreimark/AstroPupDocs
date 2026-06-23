@@ -30,8 +30,7 @@ A few things worth knowing about the scan:
   folder opens a review of exactly those frames — your good/bad
   calls are remembered for the folder either way.
 - A single image opens in the plain viewer, just like AstroPup View —
-  open a flat there and you get the same dust analysis (dust motes and
-  their distance from the sensor).
+  open a flat there and you get the same **dust analysis** (see below).
 
 ## The review window
 
@@ -69,6 +68,23 @@ header and measurements alongside:
 
 The sidebar's **Analysis** tab shows exactly why a frame was flagged
 — the measured value sits next to the threshold that caught it.
+
+## Dust analysis
+
+Open a single **flat** in Blink's viewer and it checks the frame for dust,
+just like AstroPup View.  Dust on the sensor window, a filter, or another
+surface casts a soft "donut" shadow; Blink finds those shadows and, from
+each one's size and the header's focal ratio, works out **how far the dust
+sits in front of the sensor**.
+
+![A flat open in Blink: the Dust Analysis sidebar lists two surfaces by distance, with the shadows ringed on the frame in matching colours](images/blink/dust.png "Dust grouped into surfaces — a filter near 10 mm and glass around 24 mm out")
+
+Since each glass surface sits at a fixed distance, its dust casts shadows
+of one characteristic size — so the **Dust Analysis** tab groups them into
+**surfaces** by distance, each in its own colour, with the shadows ringed
+to match on the image.  That tells you *which piece of glass to clean*.  It
+needs a flat whose header records the focal ratio (`FOCRATIO` / `FNUMBER`)
+and pixel size, which NINA and most capture software write.
 
 ## Good, bad, and your call
 
