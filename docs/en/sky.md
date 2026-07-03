@@ -41,6 +41,23 @@ disagree about an hour, the strip marks it with a small **?** and
 leans the icon toward clear.  Forecasts are cached, so a brief
 network outage shows the last known forecast rather than nothing.
 
+### Three sizes, and the week ahead
+
+![Weather strip expanded into the seven-night outlook: one row per night with a verdict symbol and word, from Tomorrow through the following week](images/sky/night-outlook.png)
+
+The strip resizes like a sheet: **swipe down** on it for more,
+**swipe up** for less, or tap the small bar beneath it to cycle.
+Sky remembers your preferred size.
+
+- **Slim** is just the chevrons, date, and site — maximum room for
+  the chart.
+- **Standard** is the hour-by-hour strip above.
+- **Expanded** adds the **7-night outlook**: one row per upcoming
+  night, each with the same verdict words and symbols as the
+  clear-sky alerts — *Clear*, *Partly clear*, *Cloudy*, *Rain*,
+  *Windy*.  **Tap a night** to plan it: the chart, shading, and
+  target list all jump to that night.
+
 ## Sky chart
 
 ![The main screen: weather strip above a full-disc sky chart with a horizon silhouette, hours-above-horizon shading, legend, and toolbar](images/sky/sky-chart.png)
@@ -48,7 +65,11 @@ network outage shows the last known forecast rather than nothing.
 The chart is your whole sky at once: the edge of the disc is your
 horizon, the center is straight up.  Deep-sky objects appear as
 catalog symbols, planets as colored discs, comets with a small
-anti-sunward tail, and the Moon with its current phase.
+anti-sunward tail, and the Moon with its current phase.  The
+catalog runs thousands of objects deep: the full NGC and IC plus
+six classic supplements — Sharpless and van den Bergh nebulae, the
+Lynds bright and dark clouds, and the Perek–Kohoutek and Abell
+catalogs.
 
 - **Pinch** to zoom and **drag** to pan.
 - **Tap any object** for its detail sheet.
@@ -93,9 +114,12 @@ hour after dusk, it goes to the front of the queue.
 The toolbar holds the chart's controls:
 
 - :sf:clock: **Shading** — switch between the three shading modes above.
-- :sf:line.3.horizontal.decrease: **Filters** — show or hide object types (galaxies, bright
-  and dark nebulae, planetary nebulae, clusters…), planets, and
-  comets; limit to favorites; hide targets you've already imaged.
+- :sf:line.3.horizontal.decrease: **Filters** — a grid of chips, arranged as a tour outward:
+  **Universe** (galaxies and galaxy groups), **Milky Way** (bright
+  and dark nebulae, planetary nebulae, clusters), and the **Solar
+  System** (Moon, planets, comets).  Tap a chip to show or hide
+  that type; two more chips limit the chart to favorites or hide
+  targets you've already imaged.
 - :sf:circle.dotted.circle: **Apparent size** — a slider that hides targets smaller than a
   chosen fraction of your field of view, with a live preview.
 - :sf:ellipsis: **More** — Settings, this documentation, credits, release
@@ -125,7 +149,10 @@ card:
   the dark window, your horizon profile, and its best visibility
   span called out.  Rise, set, and transit times sit below.
 - **Preview**: deep-sky objects show survey photography sized
-  against your field of view.  Planets show what matters tonight —
+  against your field of view — honestly, even at the extremes: a
+  nebula wider than your frame shows a correspondingly small frame
+  over its heart, not a shrunken picture.  Planets show what
+  matters tonight —
   Saturn's ring tilt, Jupiter's moon line-up, Mercury and Venus
   phases.  Comets show a top-down orbit map with distances and the
   perihelion date.  **Tap a planet or comet preview** to open it
@@ -162,6 +189,17 @@ Both come in home-screen and lock-screen sizes, each can be pinned
 to a specific site (or follow your active one), and tapping either
 opens Sky to that night.  They refresh in the background and
 whenever you open the app.
+
+## Continue from AstroPup Gallery
+
+Inspecting an object in **AstroPup Gallery** on your Mac and
+wondering "is this up tonight?"  Hand it off: the object appears
+as a Handoff banner at the bottom of your iPhone's App Switcher
+(standard Continuity — same iCloud account, Bluetooth and Wi-Fi
+on), and Gallery can also share it as a plain link.  Either way,
+Sky opens straight to that object's planning card, plotted against
+your current site tonight — even if your filters would normally
+hide it.
 
 ## Settings
 
