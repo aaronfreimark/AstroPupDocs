@@ -41,22 +41,11 @@ disagree about an hour, the strip marks it with a small **?** and
 leans the icon toward clear.  Forecasts are cached, so a brief
 network outage shows the last known forecast rather than nothing.
 
-### Three sizes, and the week ahead
-
-![The expanded weather card: tonight's hourly strip above a seven-night outlook, one row per night with a verdict symbol and word — rainy, cloudy, and partly clear nights in the week ahead](images/sky/night-outlook.png)
-
-The strip resizes like a sheet: **swipe down** on it for more,
-**swipe up** for less, or tap the small bar beneath it to cycle.
-Sky remembers your preferred size.
-
-- **Slim** is just the chevrons, date, and site — maximum room for
-  the chart.
-- **Standard** is the hour-by-hour strip above.
-- **Expanded** adds the **7-night outlook**: one row per upcoming
-  night, each with the same verdict words and symbols as the
-  clear-sky alerts — *Clear*, *Partly clear*, *Cloudy*, *Rain*,
-  *Windy*.  **Tap a night** to plan it: the chart, shading, and
-  target list all jump to that night.
+The strip resizes like a sheet — **swipe down** for more, **swipe
+up** for less, or tap the small bar beneath it.  Expanded, it adds
+a **7-night outlook** with a verdict per night; tap a night to plan
+it.  Contracted, it slims to just the date and site.  Sky remembers
+your preferred size.
 
 ## Sky chart
 
