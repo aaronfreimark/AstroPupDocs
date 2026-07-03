@@ -18,10 +18,10 @@ inspector — then through each utility.
 
 ## Sources
 
-![The Sources list showing a Dropbox archive with a dotted cloud folder icon, scan dates, and image counts](images/gallery/sources.png "Each source shows where it lives and when it was last scanned.")
+![The Sources list: a Dropbox archive with a dotted cloud folder icon and three external-drive folders, each with captured and integrated counts, scan dates, and Rescan buttons, above a log of recent scan activity](images/gallery/sources.png "Each source shows where it lives, what it holds, and when it was last scanned.")
 
 A *source* is a folder Gallery watches — your imaging archive, or
-any part of it.  Click **Add Folder** and choose the top of your
+any part of it.  Click **Scan Folder** and choose the top of your
 capture tree; Gallery scans it and builds the catalog.
 
 - **Scanning is download-efficient.**  The scan reads filenames and
@@ -90,7 +90,7 @@ credited with the little galaxies photobombing the corner.
 
 ## The gallery
 
-![The gallery grid showing five columns of deep-sky images with names and years beneath each](images/gallery/gallery-grid.png "Each card is one processed image — one target, one session.")
+![The gallery showing a grid of galaxy images, each with its name and year beneath, a solved badge in its corner, and the sidebar's collections alongside](images/gallery/gallery.jpg "Each card is one processed image — one target, one session.")
 
 The main view is your images, newest first.  Each card is a
 *processed image*: one target from one session, showing its best
@@ -118,7 +118,7 @@ remove.
 
 ## The inspector
 
-![The inspector showing an image of the Monkey Head Nebula with solve details, in-frame objects, and filter totals](images/gallery/inspector.png "Everything Gallery knows about one image.")
+![The Pleiades open full-window with its stars and nebulae annotated in yellow, and the inspector beside it showing the capture's name, dates, equipment, and solve details](images/gallery/inspector.jpg "The inspector beside the full-window view — hover over the image to reveal every object the solve identified.")
 
 Select an image and the inspector opens beside it.
 
@@ -142,7 +142,7 @@ automatically), and **Rescan Folder**.
 
 ## Plate solving
 
-![The Plate Solving utility showing solver readiness, the star database, and a log of recent solves](images/gallery/plate-solving.png "The solver's health, history, and remaining work in one place.")
+![The Plate Solving utility showing the solver and star database ready, a 30-day success tally, and a log of recent solves — successes with their scale and the other objects found in frame, failures marked with warning triangles](images/gallery/plate-solving.png "The solver's health and history — a successful solve lists the other objects it found in the frame.")
 
 Gallery plate-solves every image's preview automatically in the
 background — no setup.  The solver (ASTAP) is built in; its star
@@ -161,7 +161,7 @@ database (about 500 MB) downloads once, on the first solve.
 
 ## Sky Chart
 
-![The Sky Chart showing image footprints scattered along the winter Milky Way, one selected in blue](images/gallery/sky-chart.png "Every solved image, in its true place on the sky.")
+![The Sky Chart showing four image footprints around the Veil Nebula complex, each filled with its photograph, over real survey imagery](images/gallery/sky-chart.jpg "Every solved image, in its true place on the sky.")
 
 The Sky Chart draws every solved image as its actual footprint over
 real survey imagery.  Zoom in and the footprints fill with your
@@ -185,7 +185,7 @@ the sky.
 
 ## Objects
 
-![The Objects browser listing galaxies and nebulae with favorite stars and imaged checkmarks](images/gallery/objects.png "The whole catalog, marked with what you've captured.")
+![The Objects browser listing clusters and nebulae with favorite stars and imaged badges beside the designations, filtered by a search for sh2](images/gallery/objects.png "The whole catalog, marked with what you've captured.")
 
 **Objects** in the sidebar is the full deep-sky catalog — thousands
 of galaxies, nebulae, and clusters — overlaid with *your* history:
