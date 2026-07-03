@@ -16,7 +16,7 @@ beside the chart instead of a sheet.
 
 ## Weather strip
 
-![Weather strip showing a clear night hour by hour, with a green wind glyph, an uncertainty marker, the current-time line, and sunset and sunrise times](images/sky/weather-strip.png)
+![Weather strip showing a clear night hour by hour — a moon for each hour, question marks where the models disagree, sunset and sunrise times at the edges, and the drag bar beneath](images/sky/weather-strip.png)
 
 The strip across the top is tonight's forecast, one icon per hour
 from sunset to sunrise — a moon for clear hours, clouds, rain, or
@@ -43,7 +43,7 @@ network outage shows the last known forecast rather than nothing.
 
 ### Three sizes, and the week ahead
 
-![Weather strip expanded into the seven-night outlook: one row per night with a verdict symbol and word, from Tomorrow through the following week](images/sky/night-outlook.png)
+![The expanded weather card: tonight's hourly strip above a seven-night outlook, one row per night with a verdict symbol and word — rainy, cloudy, and partly clear nights in the week ahead](images/sky/night-outlook.png)
 
 The strip resizes like a sheet: **swipe down** on it for more,
 **swipe up** for less, or tap the small bar beneath it to cycle.
@@ -60,7 +60,7 @@ Sky remembers your preferred size.
 
 ## Sky chart
 
-![The main screen: weather strip above a full-disc sky chart with a horizon silhouette, hours-above-horizon shading, legend, and toolbar](images/sky/sky-chart.png)
+![A full-disc sky chart: the horizon silhouette around the edge, deep-sky objects as catalog symbols, and hours-above-horizon shading across the sky](images/sky/sky-chart.png)
 
 The chart is your whole sky at once: the edge of the disc is your
 horizon, the center is straight up.  Deep-sky objects appear as
@@ -125,6 +125,8 @@ The toolbar holds the chart's controls:
 - :sf:ellipsis: **More** — Settings, this documentation, credits, release
   notes, and a one-tap feedback email.
 - :sf:magnifyingglass: **Targets** — the full target list, below.
+
+![The filter panel: chips grouped under Universe, Milky Way, and Solar System headings, with each object type's chart symbol on its chip, and Imaged and Favorites-only chips below a divider](images/sky/filters.png)
 
 ## Targets list
 
