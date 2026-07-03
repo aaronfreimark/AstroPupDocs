@@ -192,17 +192,6 @@ to a specific site (or follow your active one), and tapping either
 opens Sky to that night.  They refresh in the background and
 whenever you open the app.
 
-## Continue from AstroPup Gallery
-
-Inspecting an object in **AstroPup Gallery** on your Mac and
-wondering "is this up tonight?"  Hand it off: the object appears
-as a Handoff banner at the bottom of your iPhone's App Switcher
-(standard Continuity — same iCloud account, Bluetooth and Wi-Fi
-on), and Gallery can also share it as a plain link.  Either way,
-Sky opens straight to that object's planning card, plotted against
-your current site tonight — even if your filters would normally
-hide it.
-
 ## Settings
 
 ### Sites
