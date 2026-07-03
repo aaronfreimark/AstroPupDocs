@@ -7,10 +7,11 @@ title: AstroPup Gallery Documentation
 
 AstroPup Gallery turns your existing astrophotography folders into a
 browsable, plate-solved catalog — every target, every night, every
-filter — mapped onto the real sky.  It is built for archives that
+filter — mapped onto the real sky.  Point it at an imaging folder and the gallery fills in.
+It includes special handling for archives that
 live in Dropbox or iCloud as online-only files: Gallery catalogs
-from filenames and metadata, so it never downloads your raw subs.
-Point it at an imaging folder and the gallery fills in.
+from filenames and metadata, so it never downloads all your raw subs.
+
 
 This page walks the window left to right — sidebar, gallery,
 inspector — then through each utility.
@@ -23,11 +24,13 @@ A *source* is a folder Gallery watches — your imaging archive, or
 any part of it.  Click **Add Folder** and choose the top of your
 capture tree; Gallery scans it and builds the catalog.
 
-- **Scanning is download-free.**  The scan reads filenames, folder
-  structure, and PixInsight WBPP logs, then fetches exactly one
-  small preview per image.  The hundreds of raw subs and
-  calibration frames are never downloaded — online-only files stay
-  online-only.
+- **Scanning is download-efficient.**  The scan reads filenames and
+  folder structure without downloading anything.  To learn more
+  about each capture it then fetches a small, bounded set: the WBPP
+  logs, one raw sub frame, and one preview image per capture.  If
+  your archive is in the cloud, Gallery returns each downloaded file
+  to online-only after reading it, so your disk footprint doesn't
+  grow.
 - **Folder icons show where a source lives**: a dotted folder for
   cloud storage (Dropbox, iCloud, OneDrive), a filled folder for
   local and external drives, and a folder with a question mark when
@@ -39,11 +42,51 @@ capture tree; Gallery scans it and builds the catalog.
   never silently removed — and your renames, tags, and solutions
   always survive.
 
-Sessions are recognized from folders named like
-`2026-01-22 Rosette Nebula`, with light frames in N.I.N.A.'s
-default naming underneath.  If your target names are nicknames the
-catalog doesn't know, the **My Objects** tab in Settings maps them
-to real objects once, permanently.
+Gallery doesn't require any particular folder or file naming.  It
+works best when each capture keeps three things together, wherever
+they came from: the **raw subs**, the **WBPP log** from stacking,
+and a **processed image**.  If a target's name is a nickname the
+catalog doesn't know, the **My Objects** tab in Settings maps it to
+a real object once, permanently.
+
+## How a scan works
+
+Each capture in your archive becomes one image in the gallery.
+Here is where its facts come from, in the order Gallery gathers
+them:
+
+- **Names and structure, first and free.**  Sub filenames and the
+  folders around them carry the target name, filter, exposure, and
+  capture dates.  This pass reads no file contents, so it costs
+  nothing — even against a fully online-only archive.
+- **The WBPP log is the referee.**  When PixInsight's log is
+  present, Gallery takes its accepted-and-rejected verdict as the
+  truth: integration time counts only the subs that survived
+  stacking, not everything you captured.
+- **One sub's header fills the gaps.**  A single raw frame's FITS
+  header supplies what filenames can't: your telescope, camera, and
+  pixel size — and the mount's recorded *pointing*, the actual sky
+  coordinates the frame was taken at.
+- **One preview represents the capture.**  Gallery picks the best
+  processed image in the folder (you can override it with **Change
+  Preview**), stores a small copy, and hands it to the plate
+  solver.
+
+The metadata then *seeds* the plate solve.  A solver works far
+faster and more reliably when told roughly where to look, so
+Gallery hints it with the header pointing when it has one, or the
+named target's catalog position when it doesn't — plus a field-size
+estimate from your optics.  Images with no usable hint get a
+slower, blind attempt at the end of the queue.
+
+A successful solve returns the image's exact footprint on the sky —
+center, scale, and rotation.  From that footprint Gallery
+identifies what the image actually shows: every catalog object
+inside the frame is found geometrically, the name your files
+carried is confirmed (or flagged as **Mistagged** if it lies
+outside the frame), and the in-frame objects become the image's
+tags.  That's how a frame you shot for one nebula also gets
+credited with the little galaxies photobombing the corner.
 
 ## The gallery
 
@@ -53,18 +96,18 @@ The main view is your images, newest first.  Each card is a
 *processed image*: one target from one session, showing its best
 available picture.
 
-- **Zoom with the toolbar + and − buttons** — they change how many
-  images fit per row.  The sizes adapt live as you resize the
-  window or show and hide the panels.  One step past the smallest
-  size collapses the grid into a **by-year overview**.
+- **Zoom with the toolbar :sf:plus: and :sf:minus: buttons** — they
+  change how many images fit per row.  The sizes adapt live as you
+  resize the window or show and hide the panels.  One step past the
+  smallest size collapses the grid into a **by-year overview**.
 - **Arrow keys walk the selection** — left and right continue past
   the ends of rows — and the view scrolls to follow.  Press
   **Space** or double-click to open the image full-window; hover
   over it there to reveal the objects annotated in the frame.
 - **Hover over any card** to see the whole image letterboxed
   instead of cropped.
-- A small badge marks a plate-solved image; mosaics show a panel
-  count.
+- A small :sf:star.bubble: badge marks a plate-solved image;
+  mosaics show a panel count.
 
 The sidebar's collections slice the same images: **Recent**,
 **Unsolved**, **Untagged**, **Mistagged** (a name that contradicts
@@ -92,9 +135,9 @@ Select an image and the inspector opens beside it.
 - **Sky Chart** frames this image on the chart; **Related images**
   jumps between sessions of the same target.
 
-The action menu holds the rest: **Rename** (a custom name that
-survives rescans), **Re-solve**, **Change Preview** (pick a better
-image file if the automatic choice was wrong — it re-solves
+The :sf:gearshape: menu holds the rest: **Rename** (a custom name
+that survives rescans), **Re-solve**, **Change Preview** (pick a
+better image file if the automatic choice was wrong — it re-solves
 automatically), and **Rescan Folder**.
 
 ## Plate solving
@@ -108,9 +151,9 @@ database (about 500 MB) downloads once, on the first solve.
 - Solves are *seeded* by your FITS header pointing or the target's
   catalog position, which makes them fast and reliable.  Anything
   left unhinted gets a slower blind attempt afterward.
-- **Plate Solving** in the sidebar shows readiness, what's solving
-  right now, and a log of every success and failure with the full
-  solver transcript.
+- **Plate Solving** :sf:star.bubble: in the sidebar shows
+  readiness, what's solving right now, and a log of every success
+  and failure with the full solver transcript.
 - A few images may never solve — heavily processed, starless, or
   strongly drizzled finals can defeat any solver.  **Change
   Preview** with a cleaner export usually fixes it; the rest are
@@ -133,8 +176,10 @@ the sky.
   to list them.  **Ruler** :sf:ruler: measures the sky: click two
   points for the angular distance between them; a third click
   starts a fresh measurement.
-- The **My Images** toggle hides and shows your footprints; the
-  zoom buttons and **Zoom to Fit** frame the view.
+- The **My Images** toggle — :sf:rectangle.dashed: hides your
+  footprints, :sf:photo: shows them.
+- **Zoom** with :sf:plus: and :sf:minus:, or
+  :sf:square.arrowtriangle.4.outward: to fit the whole sky.
 - The background survey (DSS2 color, Hydrogen-alpha, infrared, and
   more) and the projection are chosen in Settings.
 
@@ -179,8 +224,10 @@ in the Objects browser or on the chart.
 
 ## Tips
 
-- **Name folders with the date and target** —
-  `2026-02-11 M 81` — and Gallery gets everything else on its own.
+- **Keep each capture's subs, WBPP log, and a finished image
+  together.**  That's all Gallery needs — the subs carry the
+  metadata, the log settles the integration time, and the finished
+  image becomes the preview and the plate solve.
 - **Trust the rescan.**  It never overwrites your work: custom
   names, tags, chosen previews, favorites, notes, and plate
   solutions all survive, and anything destructive is reported
