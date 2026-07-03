@@ -90,7 +90,7 @@ credited with the little galaxies photobombing the corner.
 
 ## The gallery
 
-![The gallery showing a grid of galaxy images, each with its name and year beneath, a solved badge in its corner, and the sidebar's collections alongside](images/gallery/gallery.jpg "Each card is one processed image — one target, one session.")
+![The gallery showing a grid of deep-sky images, each with its name and year beneath, a solved badge in its corner, and the sidebar's collections alongside](images/gallery/gallery.png "Each card is one processed image — one target, one session.")
 
 The main view is your images, newest first.  Each card is a
 *processed image*: one target from one session, showing its best
@@ -118,7 +118,7 @@ remove.
 
 ## The inspector
 
-![The Pleiades open full-window with its stars and nebulae annotated in yellow, and the inspector beside it showing the capture's name, dates, equipment, and solve details](images/gallery/inspector.jpg "The inspector beside the full-window view — hover over the image to reveal every object the solve identified.")
+![The Pleiades open full-window with its stars and nebulae annotated in yellow, and the inspector beside it showing the capture's name, dates, equipment, and solve details](images/gallery/inspector.png "The inspector beside the full-window view — hover over the image to reveal every object the solve identified.")
 
 Select an image and the inspector opens beside it.
 
@@ -161,7 +161,7 @@ database (about 500 MB) downloads once, on the first solve.
 
 ## Sky Chart
 
-![The Sky Chart showing four image footprints around the Veil Nebula complex, each filled with its photograph, over real survey imagery](images/gallery/sky-chart.jpg "Every solved image, in its true place on the sky.")
+![The Sky Chart showing four image footprints around the Veil Nebula complex, each filled with its photograph, over real survey imagery](images/gallery/sky-chart.png "Every solved image, in its true place on the sky.")
 
 The Sky Chart draws every solved image as its actual footprint over
 real survey imagery.  Zoom in and the footprints fill with your
